@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="image/logo-sm.png" type="image/x-icon" />
+    <title>Game Over</title>
+    <link rel="stylesheet" href="css/all.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/media-query.css" />
+  </head>
+  <body>
+    <!-- !start up -->
+    <div class="up hidden" id="up">
+      <i class="fa-solid fa-arrow-up"></i>
+    </div>
+    <!-- !end up -->
+    <!-- !start theme color  -->
+    <div id="themeToggle">
+      <i class="fa-solid fa-moon" id="moon"></i>
+      <i class="fa-solid fa-sun d-none" id="sun"></i>
+    </div>
+    <!-- !end theme color  -->
+    <!-- !start login  -->
+    <main class="container login min-vh-100 hstack d-none">
+      <section class="login-area shadow w-100 rounded overflow-hidden">
+        <div class="row g-0">
+          <div class="col-lg-5 d-none d-md-block">
+            <div class="image"></div>
+          </div>
+          <div class="col-lg-7">
+            <div class="p-4">
+              <header class="text-center">
+                <img src="image/logo-sm.png" alt="logo game over" />
+                <h1>LogIn to Game Over</h1>
+              </header>
+
+              <form class="row g-3 my-4" id="login">
+                <div class="col-12">
+                  <div class="form-data">
+                    <input
+                      type="email"
+                      id="email"
+                      class="form-control"
+                      placeholder="Email Address"
+                    />
+                    <ul class="alert alert-danger p-0 invalid-feedback">
+                      <li>Email Is Required</li>
+                      <li>InValid Email Formate</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="form-data">
+                    <input
+                      type="password"
+                      id="password"
+                      class="form-control"
+                      placeholder="Password"
+                    />
+                    <ul class="alert alert-danger p-0 invalid-feedback">
+                      <li>Password Is Required</li>
+                      <li>
+                        Minimum eight characters, at least one letter and one
+                        number
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="col-12">
+                  <button
+                    type="submit"
+                    class="btn w-100 btn-primary"
+                    id="btnLogin"
+                  >
+                    LogIn
+                  </button>
+                  <p id="msg-login" class="text-center"></p>
+                </div>
+              </form>
+
+              <footer>
+                <p class="text-center small">
+                  Not a member yet?
+                  <a
+                    href="#"
+                    class="link-secondary text-decoration-none goRegister text-primary"
+                    role="button"
+                    >Create Account <i class="fa-solid fa-angle-right"></i
+                  ></a>
+                </p>
+              </footer>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- !end login  -->
+    <!-- !start register  -->
+    <main class="container register min-vh-100 hstack d-none">
+      <section class="register-area shadow w-100 rounded overflow-hidden">
+        <div class="row g-0">
+          <div class="col-lg-5 d-none d-md-block">
+            <div class="image"></div>
+          </div>
+          <div class="col-lg-7">
+            <div class="p-4">
+              <header class="text-center">
+                <img src="image/logo-sm.png" alt="logo game over" />
+                <h1>Register to Game Over</h1>
+              </header>
+
+              <form class="row g-3 my-4" id="register">
+                <div class="col-md-6">
+                  <div class="form-data">
+                    <input
+                      type="text"
+                      id="firstName"
+                      class="form-control"
+                      placeholder="First Name"
+                    />
+
+                    <ul class="alert alert-danger p-0 invalid-feedback">
+                      <li>First Name Is Required</li>
+                      <li>Minmum Length 2 and Maxmum 20</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-data">
+                    <input
+                      type="text"
+                      id="lastName"
+                      class="form-control"
+                      placeholder="Last Name"
+                    />
+                    <ul class="alert alert-danger p-0 invalid-feedback">
+                      <li>Last Name Is Required</li>
+                      <li>Minmum Length 2 and Maxmum 20</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="col-12">
+                  <div class="form-data">
+                    <input
+                      type="email"
+                      id="emailRegister"
+                      class="form-control"
+                      placeholder="Email Address"
+                    />
+                    <ul class="alert alert-danger p-0 invalid-feedback">
+                      <li>Email Is Required</li>
+                      <li>InValid Email Formate</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="form-data">
+                    <input
+                      type="password"
+                      id="passwordRegister"
+                      class="form-control"
+                      placeholder="Password"
+                    />
+                    <ul class="alert alert-danger p-0 invalid-feedback">
+                      <li>Password Is Required</li>
+                      <li>
+                        Minimum eight characters, at least one letter and one
+                        number
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="form-data">
+                    <input
+                      type="number"
+                      id="age"
+                      class="form-control"
+                      placeholder="Enter Age"
+                    />
+                    <ul class="alert alert-danger p-0 invalid-feedback">
+                      <li>Age Is Required</li>
+                      <li>Minimum 10 Maxmum 80</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <button
+                    type="submit"
+                    class="btn w-100 btn-primary"
+                    id="btnRegister"
+                  >
+                    Register
+                  </button>
+                  <p id="msg" class="text-center"></p>
+                </div>
+              </form>
+
+              <footer>
+                <p class="text-center small">
+                  Already a member?
+                  <a
+                    href="#"
+                    class="link-secondary text-decoration-none goLogin text-primary"
+                    role="button"
+                    >LogIn <i class="fa-solid fa-angle-right"></i
+                  ></a>
+                </p>
+              </footer>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- !end register  -->
+    <!-- !start game catagery  -->
+    <section class="games">
+      <!-- !start user name && logout -->
+      <div class="nav-item btn btn-outline-primary" id="logout">LogOut</div>
+      <div class="nav-item btn btn-outline-primary" id="nameUser">
+        welcome,customer
+      </div>
+      <!-- !end user name && logout -->
+      <!-- !start image header  -->
+      <header>
+        <img src="image/wraper.png" class="w-100" alt="game photo" />
+      </header>
+      <!-- !end image header  -->
+      <!-- ?start navbar  -->
+      <nav
+        class="navbar navbar-expand-lg nav-bg position-sticky top-0 z-3 col-md-6 col-lg-9"
+      >
+        <div class="container hstack justify-content-between">
+          <h5 class="navbar-brand mb-0 text-uppercase">
+            <img
+              src="image/logo-sm.png"
+              alt="logo photo"
+              style="max-width: 40px"
+            />
+            Game Reviews
+          </h5>
+          <button
+            class="navbar-toggler shadow-none"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="fa-solid fa-bars"></span>
+          </button>
+
+          <div
+            class="collapse small navbar-collapse"
+            id="navbarSupportedContent"
+          >
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 menu small">
+              <li class="nav-item">
+                <a
+                  role="button"
+                  class="nav-link active text-uppercase"
+                  aria-current="page"
+                  data-category="mmorpg"
+                  >mmorpg</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  role="button"
+                  class="nav-link text-uppercase"
+                  data-category="shooter"
+                  >shooter</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  role="button"
+                  class="nav-link text-uppercase"
+                  data-category="sailing"
+                  >sailing</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  role="button"
+                  class="nav-link text-uppercase"
+                  data-category="permadeath"
+                  >permadeath</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  role="button"
+                  class="nav-link text-uppercase"
+                  data-category="superhero"
+                  >superhero</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  role="button"
+                  class="nav-link text-uppercase"
+                  data-category="pixel"
+                  >pixel</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- ?end navbar  -->
+      <!-- !start games -->
+      <main class="container my-5 home text-center">
+        <section class="position-relative">
+          <div
+            class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 g-4"
+            id="gameData"
+          ></div>
+        </section>
+      </main>
+      <!-- !end games -->
+    </section>
+    <!-- !end game catagery  -->
+    <!-- !start details  -->
+    <section class="details d-none">
+      <div class="container">
+        <header class="hstack justify-content-between">
+          <h1 class="text-center h3 py-4">Details Game</h1>
+          <button class="btn-close btn-close-white" id="btnClose"></button>
+        </header>
+        <div class="row g-4" id="detailsContent"></div>
+      </div>
+    </section>
+    <!-- !end details  -->
+    <!-- *start loading  -->
+    <div class="loading d-none">
+      <span class="loader"></span>
+    </div>
+    <!-- *end loading  -->
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js" type="module"></script>
+  </body>
+</html>

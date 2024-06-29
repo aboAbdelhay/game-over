@@ -1,0 +1,27 @@
+@media (max-width: 1400px) {
+}
+@media (max-width: 1200px) {
+}
+@media (max-width: 992px) {
+  /* !start navbar */
+  .navbar {
+    .navbar-collapse {
+      text-align: center;
+      background-color: var(--main-color);
+      border-radius: 10px;
+      padding-block: 10px;
+    }
+  }
+
+  /* !end navbar */
+}
+@media (max-width: 768px) {
+}
+@media (min-width: 768px) and (max-width: 992px) {
+}
+@media (min-width: 786px) and (max-width: 1200px) {
+}
+@media (min-width: 992px) and (max-width: 1200px) {
+}
+@media (min-width: 1200px) and (max-width: 1400px) {
+}
